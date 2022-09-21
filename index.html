@@ -1,0 +1,455 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<script src="http://www.google.com/jsapi" type="text/javascript"></script>
+<script type="text/javascript">google.load("jquery", "1.3.2");</script>
+
+<style type="text/css">
+body {
+    font-family: "Titillium Web", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight: 300;
+    font-size: 17px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 980px;
+}
+h1 {
+    font-weight:300;
+    line-height: 1.15em;
+}
+
+h2 {
+    font-size: 1.75em;
+}
+a:link,a:visited {
+    color: #1367a7;
+    text-decoration: none;
+}
+a:hover {
+    color: #208799;
+}
+h1, h2, h3 {
+    text-align: center;
+}
+h1 {
+    font-size: 40px;
+    font-weight: 500;
+}
+h2 {
+    font-weight: 400;
+    margin: 16px 0px 4px 0px;
+}
+.paper-title {
+    padding: 16px 0px 16px 0px;
+}
+section {
+    margin: 32px 0px 32px 0px;
+    text-align: justify;
+    clear: both;
+}
+.col-6 {
+     width: 16.6%;
+     float: left;
+}
+.col-5 {
+     width: 20%;
+     float: left;
+}
+.col-4 {
+     width: 25%;
+     float: left;
+}
+.col-3 {
+     width: 33%;
+     float: left;
+}
+.col-2 {
+     width: 50%;
+     float: left;
+}
+.row, .author-row, .affil-row {
+     overflow: auto;
+}
+.author-row, .affil-row {
+    font-size: 20px;
+}
+.row {
+    margin: 16px 0px 16px 0px;
+}
+.authors {
+    font-size: 18px;
+}
+.affil-row {
+    margin-top: 16px;
+}
+.teaser {
+    max-width: 100%;
+}
+.text-center {
+    text-align: center;  
+}
+.screenshot {
+    width: 256px;
+    border: 1px solid #ddd;
+}
+.screenshot-el {
+    margin-bottom: 16px;
+}
+hr {
+    height: 1px;
+    border: 0; 
+    border-top: 1px solid #ddd;
+    margin: 0;
+}
+.material-icons {
+    vertical-align: -6px;
+}
+p {
+    line-height: 1.25em;
+}
+.caption {
+    font-size: 16px;
+    /*font-style: italic;*/
+    color: #666;
+    text-align: left;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+video {
+    display: block;
+    margin: auto;
+}
+figure {
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+#bibtex pre {
+    font-size: 14px;
+    background-color: #eee;
+    padding: 16px;
+}
+.blue {
+    color: #2c82c9;
+    font-weight: bold;
+}
+.orange {
+    color: #d35400;
+    font-weight: bold;
+}
+.flex-row {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.paper-btn {
+  position: relative;
+  text-align: center;
+
+  display: inline-block;
+  margin: 8px;
+  padding: 8px 8px;
+
+  border-width: 0;
+  outline: none;
+  border-radius: 2px;
+  
+  background-color: #1367a7;
+  color: #ecf0f1 !important;
+  font-size: 20px;
+  width: 100px;
+  font-weight: 600;
+}
+
+.supp-btn {
+  position: relative;
+  text-align: center;
+
+  display: inline-block;
+  margin: 8px;
+  padding: 8px 8px;
+
+  border-width: 0;
+  outline: none;
+  border-radius: 2px;
+  
+  background-color: #1367a7;
+  color: #ecf0f1 !important;
+  font-size: 20px;
+  width: 150px;
+  font-weight: 600;
+}
+
+.paper-btn-parent {
+    display: flex;
+    justify-content: center;
+    margin: 16px 0px;
+}
+.paper-btn:hover {
+    opacity: 0.85;
+}
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+.venue {
+    color: #1367a7;
+}
+
+
+
+.topnav {
+  overflow: hidden;
+  background-color: #EEEEEE;
+}
+
+.topnav a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+
+
+</style>
+
+
+<div class="topnav" id="myTopnav">
+  <a href="https://www.nvidia.com/"><img width="100%" src="assets/nvidia.svg"></a>
+  <a href="https://www.nvidia.com/en-us/research/" ><strong>NVIDIA Research</strong></a>
+</div>
+
+<!-- End : Google Analytics Code -->
+<script type="text/javascript" src="../js/hidebib.js"></script>
+<link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,600,400italic,600italic,300,300italic' rel='stylesheet' type='text/css'>
+<head>
+    <title>Shape, Light, and Material Decomposition from Images using Monte Carlo Rendering and Denoising</title>
+    <meta property="og:description" content="Extracting Triangular 3D Models, Materials, and Lighting From Images"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6HHDEXF452"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-6HHDEXF452');
+</script>
+
+</head>
+
+
+ <body>
+<div class="container">
+    <div class="paper-title">
+      <h1>Shape, Light, and Material Decomposition from Images using Monte Carlo Rendering and Denoising</h1>
+    </div>
+
+    
+    <div id="authors">
+        <div class="author-row">
+            <div class="col-3 text-center"><a href="https://research.nvidia.com/person/jon-hasselgren">Jon Hasselgren</a><sup>1</sup></div>
+            <div class="col-3 text-center"><a href="">Nikolai Hofmann</a><sup>1</sup></div>
+            <div class="col-3 text-center"><a href="https://research.nvidia.com/person/jacob-munkberg">Jacob Munkberg</a><sup>1</sup></div>
+        </div>
+
+        <div class="affil-row">
+            <div class="venue text-center"><sup>1</sup>NVIDIA</a></div>
+        </div>
+        <div class="affil-row">
+            <div class="venue text-center"><b>NeurIPS 2022</b></div>
+        </div>
+
+        <div style="clear: both">
+            <div class="paper-btn-parent">
+            <a class="supp-btn" href="https://arxiv.org/abs/2206.03380">
+                <span class="material-icons"> description </span> 
+                 Paper
+            </a>
+            <a class="supp-btn" href="assets/bib.txt">
+                <span class="material-icons"> description </span> 
+                  BibTeX
+            </a>
+            <a class="supp-btn" href="">
+                <span class="material-icons"> description </span> 
+                  Code (soon)
+            </a>
+        </div></div>
+    </div>
+
+    <section id="teaser">
+            <figure style="width: 100%;">
+                <a href="assets/system.JPG">
+                    <img width="100%" src="assets/system.JPG">
+                </a>
+                <p class="caption" style="margin-bottom: 1px;">
+                    We learn topology, materials, and environment map lighting jointly from 2D supervision. We
+                    directly optimize topology of a triangle mesh, learn materials through volumetric texturing, 
+                    and leverage Monte Carlo rendering and denoising. 
+                    Our output representation is a triangle mesh with spatially varying 2D textures and a high dynamic range environment map, 
+                    which can be used unmodified in standard game engines. <a href="https://casual-effects.com/data/">Knob model</a> 
+                    by Yasutoshi Mori, adapted by Morgan McGuire.
+                </p>
+            </figure>
+    </section>
+
+    <section id="abstract"/>
+        <h2>Abstract</h2>
+        <hr>
+        <p>
+            Recent advances in differentiable rendering have enabled high-quality reconstruction of 3D scenes from multi-view images. 
+            Most methods rely on simple rendering algorithms: pre-filtered direct lighting or learned representations 
+            of irradiance. We show that a more realistic shading model, incorporating ray tracing and Monte Carlo integration, 
+            substantially improves decomposition into shape, materials and lighting.
+            Unfortunately, Monte Carlo integration provides estimates with significant noise, even at large sample counts,
+            which makes gradient-based inverse rendering very challenging.  
+            To address this, we incorporate multiple importance sampling and denoising in a novel inverse rendering pipeline. 
+            This substantially improves convergence and enables gradient-based optimization at low sample counts.
+            We present an efficient method to jointly reconstruct geometry (explicit triangle meshes), materials, and lighting,
+            which substantially improves material and light separation compared to previous work. We argue that denoising 
+            can become an integral part of high quality inverse rendering pipelines. 
+        </p>
+    </section>
+
+    <hr>
+
+    <section id="teaser-videos">
+        <div class="flex-row">
+        <figure style="width: 70%;">
+            <video class="centered" width="90%" controls muted loop autoplay>
+                <source src="assets/video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </figure>
+            <div style="width: 30%;">
+                <br><br>
+                <p>Video illustrating our training progress and scene editing examples. All examples enabled by our <strong>explicit</strong> decomposition
+                    into a triangle mesh, PBR materials and HDR environment light, directly compatible with traditional graphics engines.
+                    Feel free to download the <a href="assets/video.mp4">video</a>, native resolution: 1024x1024 pixels. 
+                </p>        
+            </div>
+        </div>
+    </section>
+
+    <section id="results">
+
+        <h2>Improved material and light separation</h2>
+        <hr>
+        <figure style="width: 100%;">
+            <a href="assets/roller.JPG">
+                <img width="100%" src="assets/roller.JPG">
+            </a>
+            <p class="caption" style="margin-bottom: 1px;">
+                <a href="https://nvlabs.github.io/nvdiffrec/">NVDIFFREC</a> successfully reconstructs complex geometry from multi-view images,
+                but struggles with the material and light separation. On the left side, we visualize split-screens of
+                the rendered reconstruction and the diffuse albedo texture. Note that NVDIFFREC bakes most of the
+                lighting in the albedo texture, which hurts quality in relighting scenarios (shown to the right). In
+                contrast, by leveraging a more advanced renderer, we successfully disentangle material and lighting
+                (note the lack of shading in the albedo texture), and improve relighting quality. The dataset consists
+                of 200 views of the Rollercoaster from <a href="https://www.ldraw.org/">LDraw resources</a>. 
+            </p>
+        </figure>
+ 
+        <h2>Scene manipulation in standard DCC tools</h2>
+        <hr>
+        <figure style="width: 100%;">
+            <a href="assets/manipulation.JPG">
+                <img width="100%" src="assets/manipulation.JPG">
+            </a>
+            <p class="caption" style="margin-bottom: 1px;">
+                Manipulations of our extracted 3D model of the Family (part of the <a href="https://www.tanksandtemples.org/">Tanks and Temples</a> dataset) in Blender. 
+                We show scene edits, material edits, and relighting. 
+                Tree and bird models in the scene edit example are from <a href="https://www.turbosquid.com/">TurboSquid</a>.
+                .
+            </p>
+        </figure>
+
+        <h2>Explicit decomposition of shape, materials, and lighting</h2>
+        <hr>
+        <figure style="width: 100%;">
+            <a href="assets/decomposition.JPG">
+                <img width="100%" src="assets/decomposition.JPG">
+            </a>
+            <p class="caption" style="margin-bottom: 1px;">
+                We show explicit decomposition of shape, materials and lighting, directly from photos with
+                known poses. Family is part of the <a href="https://www.tanksandtemples.org/">Tanks and Temples</a> dataset, 
+                Character is part of the <a href="https://github.com/YoYo000/BlendedMVS">BlendedMVS</a> dataset and Gold Cape is part
+                of the <a href="https://markboss.me/publication/2021-nerd/">NeRD</a> dataset.
+            </p>
+        </figure>
+
+        <h2>Benefits of denoising</h2>
+        <hr>
+        <figure style="width: 100%;">
+            <a href="assets/denoising.JPG">
+                <img width="100%" src="assets/denoising.JPG">
+            </a>
+            <p class="caption" style="margin-bottom: 1px;">
+                We show the benefits of denoising on the Porsche scene from <a href="https://www.ldraw.org/">LDraw resources</a>. 
+                At low sample counts, denoising helps both with geometric reconstruction (in the cockpit) and to capture specular highlights. 
+                Even at 128 samples per pixel, denoising improves specular highlight and high frequency lighting details.
+            </p>
+        </figure>
+
+        <h2>Visualization of the optimization process</h2>
+        <hr>
+        <figure style="width: 100%;">
+            <a href="assets/optimization.JPG">
+                <img width="100%" src="assets/optimization.JPG">
+            </a>
+            <p class="caption" style="margin-bottom: 1px;">
+                The initial guess for topology are randomized SDF values on a tetrahedral grid. After 1000 iterations, we obtain high quality topology
+                and plausible materials and lighting for this complicated asset. Synthetic dataset with 200 frames, generated from a part of the Apollo capsule, 
+                courtesy of the <a href="https://3d.si.edu/">Smithsonian</a>.
+            </p>
+        </figure>
+
+
+    </section>
+    
+    <section id="bibtex">
+        <h2>Citation</h2>
+        <pre><code>
+@article{hasselgren2022nvdiffrecmc,
+    author = {Jon Hasselgren and Nikolai Hofmann and Jacob Munkberg},
+    title = "{Shape, Light, and Material Decomposition from Images using Monte Carlo Rendering and Denoising}",
+    journal = {arXiv:2206.03380},
+    year = {2022}
+}
+</code></pre>
+    </section>
+
+    
+
+<br />
+    <section id="paper">
+        <h2>Paper</h2>
+        <hr>
+        <div class="flex-row">
+            <div style="box-sizing: border-box; padding: 16px; margin: auto;">
+                <a href="https://arxiv.org/abs/2206.03380"><img class="screenshot" src="assets/paper_preview.JPG"></a>
+            </div>
+            <div style="width: 50%">
+                <p><b>Shape, Light, and Material Decomposition from Images using Monte Carlo Rendering and Denoising</b></p>
+                <p>Jon Hasselgren, Nikolai Hofmann and Jacob Munkberg</p>
+                <!-- <div><span class="material-icons"> description </span><a href="assets/paper.pdf"> Preprint</a></div> -->
+                <div><span class="material-icons"> description </span><a href="https://arxiv.org/abs/2206.03380"> arXiv version</a></div>
+                <div><span class="material-icons"> description </span><a href="assets/video.mp4"> Video</a></div>
+                <div><span class="material-icons"> insert_comment </span><a href="assets/bib.txt"> BibTeX</a></div>
+            </div>
+        </div>
+    </section>
+
+</div>
+</body>
+</html>

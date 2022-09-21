@@ -1,0 +1,8 @@
+@article{hasselgren2022nvdiffrecmc,
+    author = {Jon Hasselgren and Nikolai Hofmann and Jacob Munkberg},
+    title = "{Shape, Light, and Material Decomposition from Images using Monte Carlo Rendering and Denoising}",
+    journal = {arXiv:2206.03380},
+    year = {2022}
+}
+
+
