@@ -1,0 +1,18 @@
+{
+    "ref_mesh": "data/nerfactor/hotdog_2163",
+    "random_textures": true,
+    "iter": 5000,
+    "save_interval": 100,
+    "texture_res": [ 1024, 1024 ],
+    "train_res": [512, 512],
+    "batch": 8,
+    "learning_rate": [0.04, 0.005],
+    "dmtet_grid" : 128,
+    "mesh_scale" : 2.6,
+    "validate" : true,
+    "n_samples" : 12,
+    "denoiser" : "bilateral",
+    "display": [{"latlong" : true}, {"bsdf" : "kd"}, {"bsdf" : "ks"}, {"bsdf" : "normal"}],
+    "background" : "white",
+    "out_dir": "nerfactor_hotdog"
+}

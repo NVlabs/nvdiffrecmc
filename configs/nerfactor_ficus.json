@@ -1,0 +1,20 @@
+{
+    "ref_mesh": "data/nerfactor/ficus_2188",
+    "random_textures": true,
+    "iter": 5000,
+    "save_interval": 100,
+    "texture_res": [ 1024, 1024 ],
+    "train_res": [512, 512],
+    "batch": 8,
+    "learning_rate": [0.03, 0.005],
+    "dmtet_grid" : 128,
+    "mesh_scale" : 2.3,
+    "validate" : true,
+    "n_samples" : 8,
+    "denoiser" : "bilateral",
+    "laplace_scale" : 6000,
+    "display": [{"latlong" : true}, {"bsdf" : "kd"}, {"bsdf" : "ks"}, {"bsdf" : "normal"}],
+    "background" : "white",
+    "transparency" : true,
+    "out_dir": "nerfactor_ficus"
+}

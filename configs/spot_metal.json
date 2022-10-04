@@ -1,0 +1,23 @@
+{
+    "base_mesh": "data/spot/spot.obj",
+    "ref_mesh": "data/spot/spot.obj",
+    "mtl_override" : "data/spot/metal.mtl",
+    "random_textures": true,
+    "iter": 5000,
+    "save_interval": 100,
+    "texture_res": [ 512, 512 ],
+    "train_res": [512, 512],
+    "batch": 4,
+    "learning_rate": [0.03, 0.01],
+    "ks_min" : [0, 0.1, 0.0],
+    "ks_max" : [0, 1.0, 1.0],
+    "envlight": "data/irrmaps/aerodynamics_workshop_2k.hdr",
+    "validate" : false,
+    "lock_pos" : true,
+    "display": [{"latlong" : true}],
+    "background" : "white",
+    "denoiser": "bilateral",
+    "no_perturbed_nrm" : true,
+    "n_samples" : 8,    
+    "out_dir": "spot"
+}

@@ -1,0 +1,20 @@
+{
+    "ref_mesh": "data/bob/bob_tri.obj",
+    "random_textures": true,
+    "iter": 3000,
+    "save_interval": 100,
+    "texture_res": [ 1024, 1024 ],
+    "train_res": [512, 512],
+    "batch": 8,
+    "learning_rate": [0.03, 0.01],
+    "ks_min" : [0, 0.1, 0.0],
+    "ks_max" : [0, 1.0, 1.0],
+    "envlight": "data/irrmaps/dreifaltigkeitsberg_2k.hdr",
+    "validate" : true,
+    "lock_pos" : true,
+    "display": [{"latlong" : true}],
+    "background" : "white",
+    "denoiser": "bilateral",
+    "n_samples" : 4,    
+    "out_dir": "bob"
+}
