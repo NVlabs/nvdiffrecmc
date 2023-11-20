@@ -15,6 +15,7 @@
 #endif
 
 #include <algorithm>
+#include <fstream>
 #include <ATen/cuda/CUDAContext.h>
 #include <ATen/cuda/CUDAUtils.h>
 #include <optix.h>
